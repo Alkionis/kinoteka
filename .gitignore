@@ -1,2 +1,4 @@
 .venv
 .idea
+*.webp
+*.mkv
