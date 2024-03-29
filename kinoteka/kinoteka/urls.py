@@ -21,11 +21,13 @@ from films.views import *
 
 router = routers.SimpleRouter()
 router.register(r"films", FilmViewSet)
+router.register(r"type", TypeViewSet)
+router.register(r'category', CategoryViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/auth/', include('rest_framework.urls')),
-    path('api/v1/', include(router.urls)),
+    path('api/auth/', include('rest_framework.urls')),
+    path('api/', include(router.urls)),
 
     # path('api/v1/filmcards/', FilmsAPIView.as_view()),
     # path('api/v1/filmcard/<int:pk>/', FilmAPIView.as_view())

@@ -12,3 +12,22 @@ class FilmCard(models.Model):
     film_preview_image = models.ImageField(upload_to="uploads/preview/", help_text='Превью для фильма')
     # TODO подумать над реализацией хранения видео / пока буду использовать models.FileField
     film_videofile = models.FileField(upload_to="uploads/films/", help_text='Собственно, сам фильм')
+    category = models.ForeignKey("Category", on_delete=models.PROTECT, null=True)
+    type = models.ForeignKey("Type", on_delete=models.PROTECT, null=True)
+
+    def __str__(self):
+        return self.film_name
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100, db_index=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Type(models.Model):
+    name = models.CharField(max_length=100, db_index=True)
+
+    def __str__(self):
+        return self.name
