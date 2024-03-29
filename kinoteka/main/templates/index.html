@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+  Главная
+{% endblock %}
+
+{% block headline_film_font_name %}"Constantine"{% endblock %}
+{% block headline_film_font_name_src %}"Constantine"{% endblock %}
+{% block headline_film_font_family_name %}"Constantine"{% endblock %}
+
+{% block headline_film_font_url %}
+    {% static '/fonts/Constantine.ttf'%}
+{% endblock %}
+
+{% block headline_film%}
+    Ганнибал
+{% endblock %}
+
+{% block headline_film_descriptions %}
+    с 2013, детектив, триллер 3 сезона США 18+
+{% endblock %}
+
+{% block headline_film_text_films %}
+    Каннибал-интеллектуал водит ФБР за нос. Самая эстетская экранизация романов про доктора Лектера
+{% endblock %}
+
+{% block headline_film_image %}
+    {% static 'img\film_wallpaper.jpg' %}
+{% endblock %}
+{% block popular_films_images %}
+    <img src="{% static 'img/recomended_films/2.png' %}" alt="">
+			<img src="{% static 'img/recomended_films/3.webp' %}" alt="">
+			<img src="{% static 'img/recomended_films/4.png' %}" alt="">
+			<img src="{% static 'img/recomended_films/5.jpg' %}" alt="">
+			<img src="{% static 'img/recomended_films/1.webp' %}" alt="">
+			<img src="{% static 'img/recomended_films/2.png' %}" alt="">
+			<img src="{% static 'img/recomended_films/3.webp' %}" alt="">
+			<img src="{% static 'img/recomended_films/3.webp' %}" alt="">
+{% endblock %}

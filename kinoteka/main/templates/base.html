@@ -4,21 +4,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Кинотека</title>
+	<title>{% block title %}{% endblock %}</title>
 	<script src="https://kit.fontawesome.com/a3a753885a.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="{% static '/style.css'%}">
 	<style>
 	   @font-face {
     	font-family: 'intro';
     	src: local('intro'),
-         url("{% static '/fonts/Intro.otf' format('truetype')%}");
+         url({% static '/fonts/Intro.otf' %});
   		}
 	   @font-face {
-    	font-family: 'Kaisei HarunoUmi';
-    	src: local('Kaisei HarunoUmi'),
-         url("{% static '/fonts/Constantine.ttf' format('truetype')%}");
+    	font-family:{% block headline_film_font_name %}{% endblock %};
+    	src: local({% block headline_film_font_name_src %}{% endblock %}),
+         url({% block headline_film_font_url %}{% endblock %});
   		}
 	</style>
+    <style>
+       .headline_film{
+        color: #900000;
+        font-size: 110px;
+        font-family: {% block headline_film_font_family_name %}{% endblock %};
+	    }
+    </style>
 </head>
 <body>
 	<div class="header">
@@ -33,9 +40,9 @@
 	</div>
 	<div class="container">
 		<div class="description_film_container">
-			<h1 class="headline_film">Ганнибал</h1>
-			<p class="descriptions">с 2013, детектив, триллер 3 сезона США 18+</p>
-			<p class="text_films">Каннибал-интеллектуал водит ФБР за нос. Самая эстетская экранизация романов про доктора Лектера</p>
+			<h1 class="headline_film">{% block headline_film%}{% endblock %}</h1>
+			<p class="descriptions">{% block headline_film_descriptions %}{% endblock %}</p>
+			<p class="text_films">{% block headline_film_text_films %}{% endblock %}</p>
 
 			<div class="buttons_description_films">
 				<div class="button_watch">
@@ -48,21 +55,14 @@
 			</div>
 		</div>
 		<div class="gradient_film_wallpaper">
-			<img src="{% static 'img\film_wallpaper.jpg' %}" alt="">
+			<img src="{% block headline_film_image %}{% endblock %}" alt="">
 		</div>
 
 	</div>
 	<div class="container_recomended_fillms">
 		<h2 class="headline_recomended_films">Популярно сейчас</h2>
 		<div class="images_recomended_films">
-			<img src="{% static 'img/recomended_films/2.png' %}" alt="">
-			<img src="{% static 'img/recomended_films/3.webp' %}" alt="">
-			<img src="{% static 'img/recomended_films/4.png' %}" alt="">
-			<img src="{% static 'img/recomended_films/5.jpg' %}" alt="">
-			<img src="{% static 'img/recomended_films/1.webp' %}" alt="">
-			<img src="{% static 'img/recomended_films/2.png' %}" alt="">
-			<img src="{% static 'img/recomended_films/3.webp' %}" alt="">
-			<img src="{% static 'img/recomended_films/3.webp' %}" alt="">
+            {% block popular_films_images %}{% endblock %}
 		</div>
 	</div>
 </body>

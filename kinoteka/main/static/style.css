@@ -115,15 +115,6 @@ body{
 .description_film_container h1, .descriptions, .text_films{
 	margin: 5px;
 }
-@font-face {
-	font-family: "Kaisei HarunoUmi";
-	src: url("{% static 'static/fonts/Constantine.ttf'%}") format("opentype");
-}
-.headline_film{
-	color: #900000;
-	font-size: 110px;
-	font-family: Kaisei HarunoUmi;
-}
 .descriptions{
 	color: #959595;
 	font-size: 30px;
