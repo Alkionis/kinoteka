@@ -1,0 +1,81 @@
+{% extends "base_account.html" %}
+{% load static %}
+
+{% block title %}
+  Аккаунт
+{% endblock %}
+
+{% block headline_film_font_name %}"Constantine"{% endblock %}
+{% block headline_film_font_name_src %}"Constantine"{% endblock %}
+{% block headline_film_font_family_name %}"Constantine"{% endblock %}
+
+{% block headline_film_font_url %}
+    {% static '/fonts/Constantine.ttf'%}
+{% endblock %}
+
+{% block username %}
+    kamalov bulat
+{% endblock %}
+
+{% block movies_watched %}
+    <div class="movies_watched_image">
+        <img src="{% static 'img/account/1.webp' %}" alt="">
+        <p>Кинг Конг</p>
+    </div>
+    <div class="movies_watched_image">
+        <img src="{% static 'img/account/2.webp' %}" alt="">
+        <p>Любовь истекает кровью</p>
+    </div>
+    <div class="movies_watched_image">
+        <img src="{% static 'img/account/3.jpg' %}" alt="">
+        <p>Руди</p>
+    </div>
+    <div class="movies_watched_image">
+        <img src="{% static 'img/account/4.jpg' %}" alt="">
+        <p>Лесная ведьма</p>
+    </div>
+    <div class="movies_watched_image">
+        <img src="{% static 'img/account/5.jpg' %}" alt="">
+        <p>Милая сью</p>
+    </div>
+    <div class="movies_watched_image">
+        <img src="{% static 'img/account/6.jpg' %}" alt="">
+        <p>Ромми</p>
+    </div>
+    <div class="movies_watched_image">
+        <img src="{% static 'img/account/7.jpg' %}" alt="">
+        <p>Абсолютный мир</p>
+    </div>
+{% endblock %}
+
+{% block bookmarks%}
+       <div class="movies_watched_image">
+        <img src="{% static 'img/account/1.webp' %}" alt="">
+        <p>Кинг Конг</p>
+    </div>
+    <div class="movies_watched_image">
+        <img src="{% static 'img/account/2.webp' %}" alt="">
+        <p>Любовь истекает кровью</p>
+    </div>
+    <div class="movies_watched_image">
+        <img src="{% static 'img/account/3.jpg' %}" alt="">
+        <p>Руди</p>
+    </div>
+    <div class="movies_watched_image">
+        <img src="{% static 'img/account/4.jpg' %}" alt="">
+        <p>Лесная ведьма</p>
+    </div>
+    <div class="movies_watched_image">
+        <img src="{% static 'img/account/5.jpg' %}" alt="">
+        <p>Милая сью</p>
+    </div>
+    <div class="movies_watched_image">
+        <img src="{% static 'img/account/6.jpg' %}" alt="">
+        <p>Ромми</p>
+    </div>
+     <div class="movies_watched_image">
+        <img src="{% static 'img/account/7.jpg' %}" alt="">
+        <p>Абсолютный мир</p>
+    </div>
+    </div>
+{% endblock %}

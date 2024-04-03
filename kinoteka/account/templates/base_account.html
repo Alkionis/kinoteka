@@ -42,41 +42,29 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		<div class="description_film_container">
-			<h1 class="headline_film">{% block headline_film%}{% endblock %}</h1>
-			<p class="descriptions">{% block headline_film_descriptions %}{% endblock %}</p>
-			<p class="text_films">{% block headline_film_text_films %}{% endblock %}</p>
-
-			<div class="buttons_description_films">
-				<div class="gradient_button_watch">
-					<div class="button_watch">
-						<i class="fa-solid fa-play"></i>
-						<p class="buttons_description_films_text">смотреть</p>
-					</div>
-				</div>
-				<div class="gradient_button_trailer">
-					<div class="button_trailer">
-						<p class="buttons_description_films_text">трейлер</p>
-					</div>
-				</div>
-				<div class="buttons_favorite_film">
-					<i class="fa-regular fa-bookmark"></i>
-				</div>
-				<div class="buttons_more_film">
-					<i class="fa-solid fa-ellipsis"></i>
-				</div>
+	<div class="container_account">
+		<div class="gradient_container_avatar">
+			<div class="avatar">
+				<i class="fa-solid fa-user"></i>
 			</div>
 		</div>
-		<div class="gradient_film_wallpaper">
-			<img src="{% block headline_film_image %}{% endblock %}" alt="">
+		<div class="name">
+			<p>{% block username%}{% endblock %}</p>
 		</div>
-
+		<div class="settings">
+			<p>Настройки</p>
+		</div>
 	</div>
-	<div class="container_recomended_fillms">
-		<h2 class="headline_recomended_films">Популярно сейчас</h2>
-		<div class="images_recomended_films">
-            {% block popular_films_images %}{% endblock %}
+	<div class="container_movies_watched">
+		<h3 class="headline_movies_watched">Просмотренные фильмы</h3>
+		<div class="images_movies_watched">
+			{% block movies_watched%}{% endblock %}
+		</div>
+	</div>
+	<div class="container_movies_watched">
+		<h3 class="headline_movies_watched">Буду смотреть</h3>
+		<div class="images_movies_watched">
+			{% block bookmarks%}{% endblock %}
 		</div>
 	</div>
 </body>
