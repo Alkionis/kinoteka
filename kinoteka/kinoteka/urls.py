@@ -31,4 +31,5 @@ urlpatterns = [
 
     # path('api/v1/filmcards/', FilmsAPIView.as_view()),
     # path('api/v1/filmcard/<int:pk>/', FilmAPIView.as_view())
+    path('', include('main.urls'))
 ]

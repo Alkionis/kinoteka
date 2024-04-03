@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %}</title>
+	<script src="https://kit.fontawesome.com/a3a753885a.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="{% static '/style.css'%}">
+	<style>
+	   @font-face {
+    	font-family: 'intro';
+    	src: local('intro'),
+         url({% static '/fonts/Intro.otf' %});
+  		}
+	   @font-face {
+    	font-family:{% block headline_film_font_name %}{% endblock %};
+    	src: local({% block headline_film_font_name_src %}{% endblock %}),
+         url({% block headline_film_font_url %}{% endblock %});
+  		}
+	</style>
+    <style>
+       .headline_film{
+        color: #900000;
+        font-size: 110px;
+        font-family: {% block headline_film_font_family_name %}{% endblock %};
+	    }
+    </style>
+</head>
+<body>
+	<div class="header">
+		<h4 class="headline_name">Кинотека</h4>
+		<div class="buttons_container">
+			<h4  class="headline_chapter">фильмы</h4>
+			<h4  class="headline_chapter">сериалы</h4>
+			<h4  class="headline_chapter">аниме</h4>
+			<i class="fa-solid fa-magnifying-glass"></i>
+		</div>
+		<i class="fa-solid fa-user"></i>
+	</div>
+	<div class="container">
+		<div class="description_film_container">
+			<h1 class="headline_film">{% block headline_film%}{% endblock %}</h1>
+			<p class="descriptions">{% block headline_film_descriptions %}{% endblock %}</p>
+			<p class="text_films">{% block headline_film_text_films %}{% endblock %}</p>
+
+			<div class="buttons_description_films">
+				<div class="button_watch">
+					<i class="fa-solid fa-play"></i>
+					<p class="buttons_description_films_text">смотреть</p>
+				</div>
+				<div class="button_trailer">
+					<p class="buttons_description_films_text">трейлер</p>
+				</div>
+			</div>
+		</div>
+		<div class="gradient_film_wallpaper">
+			<img src="{% block headline_film_image %}{% endblock %}" alt="">
+		</div>
+
+	</div>
+	<div class="container_recomended_fillms">
+		<h2 class="headline_recomended_films">Популярно сейчас</h2>
+		<div class="images_recomended_films">
+            {% block popular_films_images %}{% endblock %}
+		</div>
+	</div>
+</body>
+</html>
